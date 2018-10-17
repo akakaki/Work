@@ -124,6 +124,7 @@ table tr:not(:first-child):hover {
 }
 
 table th {
+  padding: 8px;
   text-align: left;
   background: #42b983;
   color: #fff;

@@ -32,7 +32,7 @@ table {
   }
 
   th { 
-    text-align:left; background:#42b983; color:#fff; font-weight:initial;
+    padding:8px; text-align:left; background:#42b983; color:#fff; font-weight:initial;
     &:not(:nth-child(2)){ text-align:center; }
   }
 
