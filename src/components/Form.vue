@@ -37,7 +37,7 @@
             <td>{{item.price}}</td>
             <td>{{item.num}}</td>
             <td>
-              <button>刪除</button>
+              <button @click="removeBtn(index)">刪除</button>
             </td>
           </tr>
         </tbody>
@@ -75,13 +75,16 @@ export default {
   methods:{
     addBtn(){
       if( this.title != '' && this.price != '' && this.num != '' ){
-        this.lists.push({title:this.title, price:this.price, num:this.num})   
+        this.lists.push({title:this.title, price:Number(this.price), num:Number(this.num)})   
         this.title = '',
         this.price = '',
         this.num = ''
       }else{
         alert('請完整輸入新增資訊。')
       }
+    },
+    removeBtn(index){
+      this.lists.splice(index,1)
     }
   }
 }
