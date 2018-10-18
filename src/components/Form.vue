@@ -5,19 +5,19 @@
       <div>
         <ul>
           <li>
-            <input type="text" placeholder="名稱">
+            <input v-model="title" type="text" placeholder="名稱">
             <span></span>
           </li>
           <li>
-            <input type="text" placeholder="單價">
+            <input v-model="price" type="text" placeholder="單價">
             <span></span>
           </li>
           <li>
-            <input type="text" placeholder="數量">
+            <input v-model="num" type="text" placeholder="數量">
             <span></span>
           </li>
         </ul>
-        <button>新增</button>
+        <button @click="addBtn">新增</button>
       </div>
     </div>
     <div class="bag">
@@ -52,6 +52,9 @@ export default {
   name: 'buyForm',
   data(){
     return{
+      title: '',
+      price: '',
+      num: '',
       lists: [
         { title: '法蘭絨格紋襯衫', price: 790, num: 1 },
         { title: '羊毛法蘭絨混紡 SLIM FIT外套', price: 3990 , num: 2 },
@@ -67,6 +70,18 @@ export default {
         prices = prices + this.lists[i].price * this.lists[i].num
       }
       return prices
+    }
+  },
+  methods:{
+    addBtn(){
+      if( this.title != '' && this.price != '' && this.num != '' ){
+        this.lists.push({title:this.title, price:this.price, num:this.num})   
+        this.title = '',
+        this.price = '',
+        this.num = ''
+      }else{
+        alert('請完整輸入新增資訊。')
+      }
     }
   }
 }
