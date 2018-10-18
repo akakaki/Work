@@ -73,7 +73,7 @@ table {
         &:nth-child(2){ font-size:1.2rem; width:100%; }
         &:nth-child(3), &:nth-child(4){ max-width:50%; box-sizing:border-box; padding:0 12px 8px }
         &:nth-child(3)::before, &:nth-child(4)::before{ font-size:.9rem; color:#303030; }
-        &:nth-child(3)::before{ content:'價格：'; }
+        &:nth-child(3)::before{ content:'單價：'; }
         &:nth-child(4)::before{ content:'數量：'; }
         &:nth-child(5){ width:100%; }
       }

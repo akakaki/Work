@@ -241,7 +241,7 @@ table td:not(:nth-child(2)) {
     color: #303030;
   }
   table tr:not(:first-child) td:nth-child(3)::before {
-    content: '價格：';
+    content: '單價：';
   }
   table tr:not(:first-child) td:nth-child(4)::before {
     content: '數量：';
